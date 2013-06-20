@@ -44,7 +44,7 @@ public class PdtConnectorEngine extends AbstractPrologEngine {
 	@Override
 	public Term asTerm(String termString, Jpc context) { //TODO delete context here
 		try {
-			CTerm pdtTerm = CTermUtil.parseNonCanonicalTerm(termString);
+			CTerm pdtTerm = CTermUtil.parseNonCanonicalTerm(termString, wrappedEngine);
 			return PdtConnectorBridge.fromPdtConnectorToJpc(pdtTerm);
 		} catch(Exception e) {
 			throw new PrologParsingException(termString, e);
