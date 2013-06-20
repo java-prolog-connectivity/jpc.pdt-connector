@@ -52,8 +52,8 @@ public class PdtConnectorEngine extends AbstractPrologEngine {
 	}
 
 	@Override
-	protected Query basicQuery(Term goal, Jpc context) {
-		return new PdtConnectorQuery(this, goal, context);
+	protected Query basicQuery(Term goal, boolean errorHandledQuery, Jpc context) {
+		return new PdtConnectorQuery(this, goal, errorHandledQuery, context);
 	}
 
 }

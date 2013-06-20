@@ -19,8 +19,8 @@ public class PdtConnectorQuery extends DeterministicPrologQuery {
 	private PrologInterface wrappedPdtEngine;
 	private String queryString;
 	
-	public PdtConnectorQuery(PdtConnectorEngine prologEngine, Term goal, Jpc context) {
-		super(prologEngine, goal, context);
+	public PdtConnectorQuery(PdtConnectorEngine prologEngine, Term goal, boolean errorHandledQuery, Jpc context) {
+		super(prologEngine, goal, errorHandledQuery, context);
 		wrappedPdtEngine = prologEngine.getWrappedEngine();
 		queryString = getInstrumentedGoal().toEscapedString();
 	}
