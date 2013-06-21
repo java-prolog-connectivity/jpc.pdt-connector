@@ -39,7 +39,11 @@ public class PdtConnectorTermReader extends TermReader {
 			CVariable pdtVariable = (CVariable) term;
 			getContentHandler().startVariable(pdtVariable.getVariableName());
 		} else if (term instanceof CAtom) {
-			getContentHandler().startAtom(term.getFunctorValue());
+			try {
+				getContentHandler().startAtom(term.getFunctorValue()); //this is giving problems in certain cases (for example with the operator '/\')
+			} catch(Exception e) { //temporary solution, getFunctorValue() should be fixed
+				getContentHandler().startAtom(term.toString());
+			}
 		} else if (term instanceof CNil) {
 			getContentHandler().startAtom(EMPTY_LIST_SYMBOL);
 		} else if(term instanceof CCompound) {
