@@ -52,7 +52,7 @@ public class PdtConnectorEngine extends AbstractPrologEngine {
 	}
 
 	@Override
-	protected Query basicQuery(Term goal, boolean errorHandledQuery, Jpc context) {
+	public Query basicQuery(Term goal, boolean errorHandledQuery, Jpc context) {
 		return new PdtConnectorQuery(this, goal, errorHandledQuery, context);
 	}
 
