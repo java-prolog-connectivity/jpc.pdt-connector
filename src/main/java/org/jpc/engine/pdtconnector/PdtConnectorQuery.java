@@ -30,7 +30,9 @@ public class PdtConnectorQuery extends DeterministicPrologQuery {
 		Map<String, Object> pdtBindings;
 		PrologSession session = null;
 		try {
-			session = wrappedPdtEngine.getSession(PrologInterface.CTERMS);
+			//session = wrappedPdtEngine.getSession(PrologInterface.CTERMS);
+			//session = wrappedPdtEngine.getSession(PrologInterface.CTERMS|PrologInterface.UNBOUND_VARIABLES);
+			session = wrappedPdtEngine.getSession(PrologInterface.JPC);
 			pdtBindings = session.queryOnce(queryString);
 			if(pdtBindings == null)
 				throw new NoSuchElementException();
