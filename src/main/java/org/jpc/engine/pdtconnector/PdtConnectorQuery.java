@@ -11,7 +11,7 @@ import org.cs3.prolog.pif.PrologInterfaceException;
 import org.cs3.prolog.session.PrologSession;
 import org.jpc.Jpc;
 import org.jpc.query.DeterministicPrologQuery;
-import org.jpc.query.QuerySolution;
+import org.jpc.query.Solution;
 import org.jpc.term.Term;
 
 public class PdtConnectorQuery extends DeterministicPrologQuery {
@@ -26,7 +26,7 @@ public class PdtConnectorQuery extends DeterministicPrologQuery {
 	}
 
 	@Override
-	protected QuerySolution basicOneSolutionOrThrow() {
+	protected Solution basicOneSolutionOrThrow() {
 		Map<String, Object> pdtBindings;
 		PrologSession session = null;
 		try {
@@ -48,7 +48,7 @@ public class PdtConnectorQuery extends DeterministicPrologQuery {
 			Term term = PdtConnectorBridge.fromPdtConnectorToJpc(pdtTerm);
 			oneSolution.put(pdtBinding.getKey(), term);
 		}
-		return new QuerySolution(oneSolution, getPrologEngine(), getJpcContext());
+		return new Solution(oneSolution, getPrologEngine(), getJpcContext());
 	}
 	
 	@Override
