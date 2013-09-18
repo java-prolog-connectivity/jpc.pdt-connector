@@ -14,7 +14,7 @@
 	<name>JPC-PDT Connector bridge</name>
 	<description>A JPC bridge for the PDT Connector library</description>
 	<packaging>jar</packaging>
-	<url>https://github.com/sergio-castro/jpc-pdtconnector</url>
+	<url>https://github.com/java-prolog-connectivity/jpc-pdtconnector</url>
 	
 	<licenses>
 	    <license>
@@ -24,9 +24,9 @@
     </licenses>
 
 	<scm>
-		<connection>scm:git:git@github.com:sergio-castro/jpc.pdtconnector.git</connection>
-		<developerConnection>scm:git:git@github.com:sergio-castro/jpc.pdtconnector.git</developerConnection>
-		<url>git@github.com:sergio-castro/jpc.pdtconnector.git</url>
+		<connection>scm:git:git@github.com:java-prolog-connectivity/jpc.pdtconnector.git</connection>
+		<developerConnection>scm:git:git@github.com:java-prolog-connectivity/jpc.pdtconnector.git</developerConnection>
+		<url>git@github.com:java-prolog-connectivity/jpc.pdtconnector.git</url>
 	</scm>
     
     <developers>
