@@ -3,10 +3,9 @@ package org.jpc.pdtconnector;
 import static org.jpc.engine.provider.PrologEngineProviderManager.setPrologEngineProvider;
 
 import org.jpc.PrologEngineTestSuite;
-import org.jpc.engine.pdtconnector.PdtConnectorDriver;
-import org.jpc.engine.prolog.driver.AbstractPrologEngineDriver;
 import org.jpc.engine.provider.SimpleEngineProvider;
 import org.jpc.examples.PrologExamplesTestSuite;
+import org.jpc.util.config.EngineConfigurationManager;
 import org.junit.BeforeClass;
 import org.junit.runner.RunWith;
 import org.junit.runners.Suite;
@@ -18,8 +17,7 @@ public class PdtConnectorPrologEngineTestSuite {
 	
 	@BeforeClass
 	public static void setUp() {
-		AbstractPrologEngineDriver prologEngineConfiguration = new PdtConnectorDriver();
-		setPrologEngineProvider(new SimpleEngineProvider(prologEngineConfiguration.createPrologEngine()));
+		setPrologEngineProvider(new SimpleEngineProvider(EngineConfigurationManager.getDefault().forAlias("pdt")));
 	}
 	
 }
