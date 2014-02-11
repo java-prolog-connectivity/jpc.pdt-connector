@@ -1,6 +1,6 @@
 package org.jpc.salt.pdtconnector;
 
-import static org.jpc.engine.prolog.PrologConstants.EMPTY_LIST_SYMBOL;
+import static org.jpc.engine.prolog.PrologConstants.NIL_SYMBOL;
 
 import java.util.Iterator;
 
@@ -45,7 +45,7 @@ public class PdtConnectorTermReader extends TermReader {
 				getContentHandler().startAtom(term.toString());
 			}
 		} else if (term instanceof CNil) {
-			getContentHandler().startAtom(EMPTY_LIST_SYMBOL);
+			getContentHandler().startAtom(NIL_SYMBOL);
 		} else if(term instanceof CCompound) {
 			CCompound pdtCompound = (CCompound) term;
 			getContentHandler().startCompound();
