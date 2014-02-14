@@ -7,8 +7,8 @@ import org.cs3.prolog.common.Util;
 import org.cs3.prolog.pif.PrologInterface;
 import org.jpc.engine.prolog.PrologEngine;
 import org.jpc.engine.prolog.driver.AbstractPrologEngineDriver;
-import org.jpc.util.supportedengines.EngineDescription;
-import org.jpc.util.supportedengines.Swi;
+import org.jpc.util.engine.supported.EngineDescription;
+import org.jpc.util.engine.supported.Swi;
 
 public class PdtConnectorDriver extends AbstractPrologEngineDriver {
 

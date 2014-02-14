@@ -2,7 +2,7 @@ package org.jpc.pdtconnector;
 
 import static org.jpc.engine.provider.PrologEngineProviderManager.setPrologEngineProvider;
 
-import org.jpc.LogtalkEngineTestSuite;
+import org.jpc.engine.logtalk.LogtalkEngineTestSuite;
 import org.jpc.engine.provider.SimpleEngineProvider;
 import org.jpc.examples.LogtalkExamplesTestSuite;
 import org.jpc.util.config.EngineConfigurationManager;
