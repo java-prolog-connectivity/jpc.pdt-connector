@@ -1,11 +1,8 @@
 {
 engines: [
   {
-    alias: "pdt",
-    factory: "org.jpc.engine.pdtconnector.PdtConnectorDriver"
-  },
-  {
-    alias: "pdt_logtalk",
+    name: "pdt_logtalk",
+    packageNames: [""],
     factory: "org.jpc.engine.pdtconnector.PdtConnectorDriver",
     profile: "org.jpc.engine.profile.LogtalkEngineProfile"
   }
