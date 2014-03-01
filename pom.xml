@@ -69,7 +69,7 @@
   		<dependency>
 			<groupId>org.cs3.roots</groupId>
 			<artifactId>org.cs3.prolog.connector</artifactId>
-			<version>2.1.0.qualifier</version>
+			<version>2.1.0</version>
 		</dependency> 
 	</dependencies>
 
