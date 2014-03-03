@@ -2,7 +2,7 @@
 engines: [
   {
     id: "pdt_logtalk",
-    packageNames: [""],
+    categoryNames: [""],
     factory: "org.jpc.engine.pdtconnector.PdtConnectorDriver",
     profile: "org.jpc.engine.profile.LogtalkEngineProfile"
   }

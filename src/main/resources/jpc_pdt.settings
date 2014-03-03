@@ -2,7 +2,7 @@
 engines: [
   {
     id: "pdt",
-    packageNames: [""],
+    categoryNames: [""],
     factory: "org.jpc.engine.pdtconnector.PdtConnectorDriver"
   }
 ]
