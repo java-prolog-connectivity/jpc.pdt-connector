@@ -1,7 +1,7 @@
 {
 engines: [
   {
-    name: "pdt_logtalk",
+    id: "pdt_logtalk",
     packageNames: [""],
     factory: "org.jpc.engine.pdtconnector.PdtConnectorDriver",
     profile: "org.jpc.engine.profile.LogtalkEngineProfile"
