@@ -1,9 +1,9 @@
 {
 engines: [
   {
-    id: "pdt",
-    categoryNames: [""],
-    factory: "org.jpc.engine.pdtconnector.PdtConnectorDriver"
+    "id": "pdt",
+    "categoryNames": [""],
+    "factory": "org.jpc.engine.pdtconnector.PdtConnectorDriver"
   }
 ]
 }
