@@ -5,23 +5,24 @@ import java.io.IOException;
 
 import org.cs3.prolog.common.Util;
 import org.cs3.prolog.pif.PrologInterface;
-import org.jpc.engine.prolog.PrologEngine;
 import org.jpc.engine.prolog.driver.AbstractPrologEngineDriver;
-import org.jpc.util.engine.supported.EngineDescription;
 import org.jpc.util.engine.supported.Swi;
 
-public class PdtConnectorDriver extends AbstractPrologEngineDriver {
+public class PdtConnectorDriver extends AbstractPrologEngineDriver<PdtConnectorEngine> {
 
 	public static final String PDT_CONNECTOR_LIBRARY_NAME = "PDT Connector";
-	private Swi engineDescription = new Swi();
 
+	public PdtConnectorDriver() {
+		super(new Swi());
+	}
+	
 	@Override
-	protected PrologEngine basicCreatePrologEngine() {
+	protected PdtConnectorEngine basicCreatePrologEngine() {
 		PrologInterface pif = null;
 		String executablePath = null;
 		String swiBinDirectory = getPreferences().getVar(Swi.SWI_BIN_DIRECTORY_PROPERTY_NAME);
 		if(swiBinDirectory != null)
-			executablePath = swiBinDirectory + File.separator + engineDescription.getExecutableFileName();
+			executablePath = swiBinDirectory + File.separator + ((Swi)getEngineDescription()).getExecutableFileName();
 		try {
 			if(executablePath != null) {
 				pif = Util.newStandalonePrologInterface(executablePath);
@@ -37,11 +38,6 @@ public class PdtConnectorDriver extends AbstractPrologEngineDriver {
 	@Override
 	public String getLibraryName() {
 		return PDT_CONNECTOR_LIBRARY_NAME;
-	}
-
-	@Override
-	public EngineDescription getEngineDescription() {
-		return engineDescription;
 	}
 	
 	@Override
