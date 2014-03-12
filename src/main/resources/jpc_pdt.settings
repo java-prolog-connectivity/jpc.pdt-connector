@@ -3,7 +3,7 @@ engines: [
   {
     "id": "pdt",
     "categoryNames": [""],
-    "factory": "org.jpc.engine.pdtconnector.PdtConnectorDriver"
+    "factoryClass": "org.jpc.engine.pdtconnector.PdtConnectorDriver"
   }
 ]
 }

@@ -3,8 +3,8 @@ engines: [
   {
     "id": "pdt_logtalk",
     "categoryNames": [""],
-    "factory": "org.jpc.engine.pdtconnector.PdtConnectorDriver",
-    "profile": "org.jpc.engine.profile.LogtalkEngineProfile"
+    "factoryClass": "org.jpc.engine.pdtconnector.PdtConnectorDriver",
+    "profileClass": "org.jpc.engine.profile.LogtalkEngineProfile"
   }
 ]
 }
