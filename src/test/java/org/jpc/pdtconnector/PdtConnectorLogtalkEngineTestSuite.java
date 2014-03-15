@@ -1,9 +1,6 @@
 package org.jpc.pdtconnector;
 
-import static org.jpc.engine.provider.PrologEngineProviderManager.setPrologEngineProvider;
-
 import org.jpc.engine.logtalk.LogtalkEngineTestSuite;
-import org.jpc.engine.provider.SimpleEngineProvider;
 import org.jpc.examples.LogtalkExamplesTestSuite;
 import org.jpc.util.config.EngineConfigurationManager;
 import org.junit.BeforeClass;
@@ -18,6 +15,5 @@ public class PdtConnectorLogtalkEngineTestSuite {
 	public static void setUp() {
 		EngineConfigurationManager engineConfigurationManager = EngineConfigurationManager.createFromFile("jpc_pdt_logtalk.settings");
 		EngineConfigurationManager.setDefault(engineConfigurationManager);
-		setPrologEngineProvider(new SimpleEngineProvider(EngineConfigurationManager.getDefault().getPrologEngineById("pdt_logtalk")));
 	}
 }
