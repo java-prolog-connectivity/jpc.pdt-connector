@@ -1,4 +1,4 @@
-package org.jpc.salt.pdtconnector;
+package org.jpc.util.salt.pdtconnector;
 
 import static org.jpc.engine.prolog.PrologConstants.NIL_SYMBOL;
 
@@ -11,8 +11,8 @@ import org.cs3.prolog.cterm.CInteger;
 import org.cs3.prolog.cterm.CNil;
 import org.cs3.prolog.cterm.CTerm;
 import org.cs3.prolog.cterm.CVariable;
-import org.jpc.salt.TermContentHandler;
-import org.jpc.salt.TermReader;
+import org.jpc.util.salt.TermContentHandler;
+import org.jpc.util.salt.TermReader;
 
 public class PdtConnectorTermReader extends TermReader {
 	

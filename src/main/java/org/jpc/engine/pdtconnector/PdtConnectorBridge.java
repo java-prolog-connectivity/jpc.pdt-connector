@@ -1,8 +1,8 @@
 package org.jpc.engine.pdtconnector;
 
 import org.cs3.prolog.cterm.CTerm;
-import org.jpc.salt.JpcTermWriter;
-import org.jpc.salt.pdtconnector.PdtConnectorTermReader;
+import org.jpc.util.salt.JpcTermStreamer;
+import org.jpc.util.salt.pdtconnector.PdtConnectorTermReader;
 import org.jpc.term.Term;
 
 public class PdtConnectorBridge {
@@ -14,7 +14,7 @@ public class PdtConnectorBridge {
 //	} 
 	
 	public static Term fromPdtConnectorToJpc(CTerm term) {
-		JpcTermWriter jpcTermWriter = new JpcTermWriter();
+		JpcTermStreamer jpcTermWriter = new JpcTermStreamer();
 		new PdtConnectorTermReader(term, jpcTermWriter).read();
 		return jpcTermWriter.getFirst();
 	} 
